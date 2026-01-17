@@ -1,17 +1,22 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
   title: "SOVINC | Sovereign Web3 Infrastructure",
   description:
-    "SOVINC is a UAE-founded consultancy working at the intersection of information systems, finance infrastructure, and web3-native payment rails.",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
+    "Enabling small businesses to operate on sovereign, on‑chain infrastructure instead of legacy financial rails.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
   },
+}
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 }
 
 export default function RootLayout({

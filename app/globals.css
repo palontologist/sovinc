@@ -129,8 +129,6 @@
     padding: 0;
     overflow: hidden;
   }
-
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap");
 }
 
 /* Added fade-in animations for hero content with staggered timing */
