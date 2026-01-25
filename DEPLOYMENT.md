@@ -18,17 +18,18 @@ Deployment request did not have a git author with contributing access to the pro
 
 This means your git commits are not authored by an account that has access to the Vercel project. To fix this:
 
-1. Configure git with your GitHub username and email:
+1. Check the repository owner or contributors with Vercel access:
+   ```bash
+   git log --format="%an <%ae>" | sort -u
+   ```
+
+2. Configure git with a GitHub account that has Vercel access to this project:
    ```bash
    git config user.name "your-github-username"
    git config user.email "your-github-email@example.com"
    ```
-
-2. For this repository, use the repository owner's credentials:
-   ```bash
-   git config user.name "palontologist"
-   git config user.email "100496915+palontologist@users.noreply.github.com"
-   ```
+   
+   **Important**: Use the email associated with your GitHub account that has access to the Vercel project. You can find your GitHub email in your GitHub settings or use the format: `YOUR_GITHUB_ID+username@users.noreply.github.com`
 
 3. Verify your configuration:
    ```bash
