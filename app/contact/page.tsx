@@ -8,6 +8,7 @@ interface ContactChip {
   label: string
   value: string
   link: string
+  icon: string
 }
 
 export default function Contact() {
@@ -16,21 +17,24 @@ export default function Contact() {
   const contactMethods: ContactChip[] = [
     {
       id: "email",
-      label: "Email",
+      label: "",
       value: "contact@sov.inc",
       link: "mailto:contact@sov.inc",
+      icon: "/gmail.png",
     },
     {
       id: "linkedin",
-      label: "LinkedIn",
+      label: "",
       value: "Emmanuel Alamu",
-      link: "https://linkedin.com/in/emmanuelalam",
+      link: "https://linkedin.com/in/emmanuelalamu",
+      icon: "/linkedin.png",
     },
     {
       id: "instagram",
-      label: "Instagram",
+       label: "", 
       value: "@mannysov",
       link: "https://instagram.com/mannysov",
+      icon: "/instagram.png",
     },
   ]
 
@@ -62,6 +66,7 @@ export default function Contact() {
                   hoveredChip === method.id ? "border-accent bg-accent/5" : "border-border hover:border-accent/50"
                 }`}
               >
+                <img src={method.icon} alt={method.label} className="w-12 h-12 mx-auto mb-3 opacity-75 group-hover:opacity-100 transition-opacity" />
                 <p
                   className={`text-xs uppercase tracking-widest font-semibold transition-colors duration-300 ${
                     hoveredChip === method.id ? "text-accent" : "text-muted-foreground"

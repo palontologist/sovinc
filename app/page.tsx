@@ -28,7 +28,7 @@ export default function Home() {
             style={{ fontFamily: "Montserrat" }}
             className="text-xs uppercase tracking-widest font-semibold text-white/80 mb-6 animate-fade-in"
           >
-            Web3 Infrastructure Consulting
+            Web3 Strategy & Operations Consulting
           </p>
 
           {/* Main Heading */}
@@ -36,12 +36,12 @@ export default function Home() {
             style={{ fontFamily: "Playfair Display", fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
             className="font-medium text-white mb-8 leading-tight animate-fade-in animation-delay-100"
           >
-            Sovereign infrastructure for the cybereconomy.
+            Enabling access to 21st Century Web3 infrastructure
           </h1>
 
           {/* Description Paragraphs */}
           <p className="text-base text-white/90 mb-6 leading-relaxed max-w-lg animate-fade-in animation-delay-200">
-            Helping MSMEs move from legacy payment networks to web3‑native, on‑chain infrastructure with greater sovereignty.
+            Helping MSMEs shift from legacy systems to Web3‑native, on‑chain infrastructure for greater ownership & sovereignty.
           </p>
 
  

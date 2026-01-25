@@ -18,7 +18,7 @@ export function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
       <div className={bgColor}>
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+        <div className="px-6 md:px-12 py-4 flex items-center justify-between w-full">
           <Link
             href="/"
             className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300"
@@ -35,18 +35,20 @@ export function Navigation() {
             <span className={`text-lg font-bold tracking-wide ${textColorBase} hidden sm:inline`} style={{ fontFamily: 'Georgia, serif', letterSpacing: '0.05em' }}>SOV</span>
           </Link>
 
-          <div className="flex gap-8 md:gap-12">
+          <div className="flex gap-8 md:gap-12 items-center">
             <Link
               href="/"
-              className={`text-xs uppercase tracking-widest font-medium transition-all duration-300 pb-2 border-b-2 ${
+              className={`hover:opacity-80 transition-opacity duration-300 flex items-center justify-center ${
                 isActive("/")
-                  ? `${textColorBase} border-[#008080]`
-                  : `${textColorMuted} border-transparent hover:${textColorBase} hover:border-[#008080]`
+                  ? `opacity-100`
+                  : `opacity-70`
               }`}
-              style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
+              aria-label="Home"
               aria-current={isActive("/") ? "page" : undefined}
             >
-              Home
+              <svg className={`w-5 h-5 ${textColorBase}`} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              </svg>
             </Link>
             <Link
               href="/about"

@@ -17,20 +17,16 @@ export default function About() {
 
             <div className="space-y-6">
               <p className="text-base leading-relaxed text-black/90" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-                SOV Solutions, doing business as SOVINC, was founded and incorporated in the United Arab Emirates by
+                SOV Solutions, doing business as SOVINC, was founded & incorporated in the United Arab Emirates by
                 Emmanuel Alamu in 2024.
               </p>
 
               <p className="text-base leading-relaxed text-black/90" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-                The company specialises in consulting organisations at the intersection of information and finance
-                technology infrastructure, with a focus on peer-to-peer electronic transactions, overlay payment
-                networks, and on-chain virtual asset protocols.
+                The company specialises in consulting companies at the intersection of information & finance technology infrastructure, with a particular focus on peer-to-peer electronic transactions, overlay payment networks, and on-chain virtual asset protocols.
               </p>
 
               <p className="text-base leading-relaxed text-black/90" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-                Its core mission is to enable and accelerate the integration of MSMEs into the emerging cybereconomy and
-                to help establish a new paradigm built on web3 technologies, delivering greater sovereignty for small
-                businesses and individuals.
+                The core mission is to both enable & accelerate the integration of MSMEs with the coming 'cybereconomy' at the fruition of the Information Age, and pave the way for a new paradigm built on novel web3 technologies; an era established with greater sovereignty for small businesses and ultimately, the individual.
               </p>
             </div>
           </div>
