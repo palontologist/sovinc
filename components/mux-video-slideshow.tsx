@@ -21,16 +21,7 @@ export function MuxVideoSlideshow() {
   }
 
   return (
-    <div 
-      className="fixed inset-0 w-full h-full overflow-hidden"
-      style={{ 
-        width: '100vw', 
-        height: '100vh',
-        position: 'fixed',
-        top: 0,
-        left: 0,
-      }}
-    >
+    <div className="fixed inset-0 w-full h-full overflow-hidden">
       <MuxPlayer
         ref={playerRef}
         playbackId={VIDEOS[currentVideoIndex].playbackId}
@@ -40,14 +31,6 @@ export function MuxVideoSlideshow() {
         onEnded={handleVideoEnded}
         metadata={{
           video_id: `video-${currentVideoIndex}`,
-        }}
-        style={{
-          width: "100vw",
-          height: "100vh",
-          objectFit: "cover",
-          position: "absolute",
-          top: 0,
-          left: 0,
         }}
       />
     </div>
