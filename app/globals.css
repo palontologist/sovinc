@@ -132,6 +132,7 @@
 
   /* Ensure full viewport height on mobile browsers */
   html {
+    height: 100vh;
     height: -webkit-fill-available;
   }
 
@@ -142,7 +143,7 @@
 
   /* Optimize video container for mobile */
   @media (max-width: 768px) {
-    #__next {
+    .min-h-screen {
       min-height: 100vh;
       min-height: -webkit-fill-available;
     }
