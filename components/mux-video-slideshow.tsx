@@ -21,7 +21,12 @@ export function MuxVideoSlideshow() {
   }
 
   return (
-    <div className="w-full h-full absolute inset-0">
+    <div 
+      className="w-full h-full absolute inset-0 overflow-hidden"
+      style={{
+        aspectRatio: "auto",
+      }}
+    >
       <MuxPlayer
         ref={playerRef}
         playbackId={VIDEOS[currentVideoIndex].playbackId}
@@ -37,7 +42,8 @@ export function MuxVideoSlideshow() {
           height: "100%",
           objectFit: "cover",
           display: "block",
-        }}
+          aspectRatio: "auto",
+        } as React.CSSProperties}
       />
     </div>
   )

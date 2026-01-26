@@ -165,3 +165,16 @@
     animation-delay: 0.4s;
   }
 }
+
+/* Mux Player fullscreen responsive styles */
+mux-player {
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: auto !important;
+  --aspect-ratio: auto !important;
+}
+
+mux-player::part(video) {
+  object-fit: cover !important;
+}
+
