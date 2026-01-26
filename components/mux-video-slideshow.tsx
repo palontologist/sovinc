@@ -21,9 +21,7 @@ export function MuxVideoSlideshow() {
   }
 
   return (
-    <div 
-      className="w-screen h-screen absolute inset-0 overflow-hidden"
-    >
+    <div className="fixed inset-0 w-full h-full overflow-hidden">
       <MuxPlayer
         ref={playerRef}
         playbackId={VIDEOS[currentVideoIndex].playbackId}
@@ -33,11 +31,6 @@ export function MuxVideoSlideshow() {
         onEnded={handleVideoEnded}
         metadata={{
           video_id: `video-${currentVideoIndex}`,
-        }}
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "block",
         }}
       />
     </div>
