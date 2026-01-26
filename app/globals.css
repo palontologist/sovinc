@@ -129,6 +129,24 @@
     padding: 0;
     overflow: hidden;
   }
+
+  /* Ensure full viewport height on mobile browsers */
+  html {
+    height: -webkit-fill-available;
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
+
+  /* Optimize video container for mobile */
+  @media (max-width: 768px) {
+    #__next {
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+    }
+  }
 }
 
 /* Added fade-in animations for hero content with staggered timing */

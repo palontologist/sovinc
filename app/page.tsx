@@ -9,10 +9,10 @@ export default function Home() {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <div className="w-full h-screen flex flex-col overflow-hidden relative">
+    <div className="w-full h-screen flex flex-col overflow-hidden relative" style={{ minHeight: '100vh', minHeight: '-webkit-fill-available' }}>
       <Navigation />
 
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0" style={{ minHeight: '100vh', minHeight: '-webkit-fill-available' }}>
         <MuxVideoSlideshow />
         <div className="absolute inset-0 bg-black/40" />
       </div>
