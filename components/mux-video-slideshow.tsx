@@ -21,7 +21,7 @@ export function MuxVideoSlideshow() {
   }
 
   return (
-    <div className="w-full h-full">
+    <div className="fixed inset-0">
       <MuxPlayer
         ref={playerRef}
         playbackId={VIDEOS[currentVideoIndex].playbackId}
