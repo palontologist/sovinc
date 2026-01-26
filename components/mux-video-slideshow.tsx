@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useRef } from "react"
 import MuxPlayer from "@mux/mux-player-react"
 
 const VIDEOS = [
@@ -23,9 +23,6 @@ export function MuxVideoSlideshow() {
   return (
     <div 
       className="w-full h-full absolute inset-0 overflow-hidden"
-      style={{
-        aspectRatio: "auto",
-      }}
     >
       <MuxPlayer
         ref={playerRef}
@@ -42,8 +39,7 @@ export function MuxVideoSlideshow() {
           height: "100%",
           objectFit: "cover",
           display: "block",
-          aspectRatio: "auto",
-        } as React.CSSProperties}
+        }}
       />
     </div>
   )
