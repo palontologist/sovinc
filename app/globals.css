@@ -168,13 +168,18 @@
 
 /* Mux Player fullscreen responsive styles */
 mux-player {
-  width: 100% !important;
-  height: 100% !important;
-  aspect-ratio: auto !important;
-  --aspect-ratio: auto !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  display: block !important;
 }
 
+mux-player video,
 mux-player::part(video) {
+  width: 100% !important;
+  height: 100% !important;
   object-fit: cover !important;
+  display: block !important;
 }
 

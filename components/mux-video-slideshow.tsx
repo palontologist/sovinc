@@ -22,7 +22,7 @@ export function MuxVideoSlideshow() {
 
   return (
     <div 
-      className="w-full h-full absolute inset-0 overflow-hidden"
+      className="w-screen h-screen absolute inset-0 overflow-hidden"
     >
       <MuxPlayer
         ref={playerRef}
@@ -37,7 +37,6 @@ export function MuxVideoSlideshow() {
         style={{
           width: "100%",
           height: "100%",
-          objectFit: "cover",
           display: "block",
         }}
       />
