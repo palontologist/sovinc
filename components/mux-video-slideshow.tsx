@@ -21,7 +21,7 @@ export function MuxVideoSlideshow() {
   }
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full absolute inset-0">
       <MuxPlayer
         ref={playerRef}
         playbackId={VIDEOS[currentVideoIndex].playbackId}
@@ -36,6 +36,7 @@ export function MuxVideoSlideshow() {
           width: "100%",
           height: "100%",
           objectFit: "cover",
+          display: "block",
         }}
       />
     </div>
