@@ -7,30 +7,27 @@ const VIDEOS = [
   {
     playbackId: "LFZoTXRUDQZyjenS4ElPsltfd9Dde02V45lAZE4kcYf00",
   },
-  {
-    playbackId: "Rl3cITDw5x00594FQge4Chy7faXedmHmGjbfkp01K59uk",
-  },
 ]
 
 export function MuxVideoSlideshow() {
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
   const playerRef = useRef(null)
-
-  const handleVideoEnded = () => {
-    setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % VIDEOS.length)
-  }
 
   return (
     <div className="fixed inset-0 w-full h-full overflow-hidden">
       <MuxPlayer
         ref={playerRef}
-        playbackId={VIDEOS[currentVideoIndex].playbackId}
+        playbackId={VIDEOS[0].playbackId}
         autoPlay
         muted
-        loop={false}
-        onEnded={handleVideoEnded}
+        loop={true}
+        style={{
+          width: '100vw',
+          height: '100vh',
+          objectFit: 'cover',
+        }}
+        className="w-full h-full object-cover"
         metadata={{
-          video_id: `video-${currentVideoIndex}`,
+          video_id: "background-video",
         }}
       />
     </div>
