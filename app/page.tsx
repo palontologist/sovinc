@@ -9,7 +9,7 @@ export default function Home() {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <div className="w-full h-full flex flex-col overflow-hidden relative">
+    <div className="w-screen h-screen flex flex-col overflow-hidden relative">
       <Navigation />
 
       <div className="fixed inset-0 z-0">

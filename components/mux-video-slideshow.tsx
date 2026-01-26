@@ -13,7 +13,7 @@ export function MuxVideoSlideshow() {
   const playerRef = useRef(null)
 
   return (
-    <div className="fixed inset-0 w-full h-full overflow-hidden">
+    <div className="fixed inset-0 w-screen h-screen overflow-hidden">
       <MuxPlayer
         ref={playerRef}
         playbackId={VIDEOS[0].playbackId}
@@ -21,11 +21,14 @@ export function MuxVideoSlideshow() {
         muted
         loop={true}
         style={{
-          width: '100vw',
-          height: '100vh',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
           objectFit: 'cover',
         }}
-        className="w-full h-full object-cover"
+        className="w-full h-full"
         metadata={{
           video_id: "background-video",
         }}
