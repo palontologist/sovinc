@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
-import { MuxVideoSlideshow } from "@/components/mux-video-slideshow"
+import { VideoHero } from "@/components/video-hero"
 import { useState } from "react"
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
       <Navigation />
 
       <div className="fixed inset-0 z-0">
-        <MuxVideoSlideshow />
+        <VideoHero />
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
