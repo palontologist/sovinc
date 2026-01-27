@@ -8,20 +8,39 @@ const VIDEOS = [
 
 export function MuxVideoSlideshow() {
   return (
-    <div className="fixed inset-0 w-screen h-screen overflow-hidden">
-      <iframe
-        src={`https://player.mux.com/${VIDEOS[0].playbackId}?autoplay=true&muted=true&loop=true`}
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100vw',
-          height: '100vh',
-          border: 'none',
-        }}
-        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-        allowFullScreen
-      />
-    </div>
+    <>
+      <style jsx>{`
+        @media (max-width: 768px) and (orientation: portrait) {
+          .mobile-portrait-video {
+            width: 100vh !important;
+            height: 100vw !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) rotate(90deg) !important;
+          }
+        }
+        @media (max-width: 1024px) and (orientation: portrait) {
+          .mobile-portrait-video {
+            width: 100vh !important;
+            height: 100vw !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) rotate(90deg) !important;
+          }
+        }
+      `}</style>
+      <div className="fixed inset-0 w-screen h-screen overflow-hidden">
+        <iframe
+          src={`https://player.mux.com/${VIDEOS[0].playbackId}?autoplay=true&muted=true&loop=true`}
+          className="absolute inset-0 w-full h-full mobile-portrait-video"
+          style={{
+            border: 'none',
+            objectFit: 'cover',
+          }}
+          allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+          allowFullScreen
+        />
+      </div>
+    </>
   )
 }
