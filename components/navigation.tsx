@@ -32,7 +32,7 @@ export function Navigation() {
               priority
               className="object-contain"
             />
-            <span className={`text-lg font-bold tracking-wide ${textColorBase} hidden sm:inline`} style={{ fontFamily: 'Georgia, serif', letterSpacing: '0.05em' }}>SOV</span>
+            <span className={`font-major text-lg font-bold tracking-wide ${textColorBase} hidden sm:inline`} style={{ letterSpacing: '0.05em' }}>SOV</span>
           </Link>
 
           <div className="flex gap-8 md:gap-12 items-center">
@@ -57,7 +57,7 @@ export function Navigation() {
                   ? `${textColorBase} border-[#008080]`
                   : `${textColorMuted} border-transparent hover:${textColorBase} hover:border-[#008080]`
               }`}
-              style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
+              className="font-minor"
               aria-current={isActive("/about") ? "page" : undefined}
             >
               About
@@ -69,7 +69,7 @@ export function Navigation() {
                   ? `${textColorBase} border-[#008080]`
                   : `${textColorMuted} border-transparent hover:${textColorBase} hover:border-[#008080]`
               }`}
-              style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
+              className="font-minor"
               aria-current={isActive("/contact") ? "page" : undefined}
             >
               Contact

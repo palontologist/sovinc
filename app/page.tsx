@@ -21,22 +21,21 @@ export default function Home() {
         <div className="max-w-2xl">
           {/* Tagline */}
           <p
-            style={{ fontFamily: "Montserrat" }}
-            className="text-xs uppercase tracking-widest font-semibold text-white/80 mb-6 animate-fade-in"
+            className="font-minor text-xs uppercase tracking-widest font-semibold text-white/80 mb-6 animate-fade-in"
           >
             Web3 Strategy & Operations Consulting
           </p>
 
           {/* Main Heading */}
           <h1
-            style={{ fontFamily: "Playfair Display", fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
-            className="font-medium text-white mb-8 leading-tight animate-fade-in animation-delay-100"
+            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
+            className="font-major font-medium text-white mb-8 leading-tight animate-fade-in animation-delay-100"
           >
             Enabling access to 21st Century Web3 infrastructure
           </h1>
 
           {/* Description Paragraphs */}
-          <p className="text-base text-white/90 mb-6 leading-relaxed max-w-lg animate-fade-in animation-delay-200">
+          <p className="font-minor text-base text-white/90 mb-6 leading-relaxed max-w-lg animate-fade-in animation-delay-200">
             Helping MSMEs shift from legacy systems to Web3‑native, on‑chain infrastructure for greater ownership & sovereignty.
           </p>
 
@@ -47,7 +46,7 @@ export default function Home() {
             href="/contact"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className={`inline-block px-8 py-3 border-2 rounded-sm font-semibold uppercase text-xs tracking-widest transition-all duration-300 animate-fade-in animation-delay-400 ${
+            className={`inline-block px-8 py-3 border-2 rounded-sm font-minor font-semibold uppercase text-xs tracking-widest transition-all duration-300 animate-fade-in animation-delay-400 ${
               isHovered
                 ? "bg-accent text-white border-accent shadow-lg shadow-accent/20"
                 : "bg-transparent text-white border-white hover:border-accent/80"

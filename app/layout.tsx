@@ -29,6 +29,7 @@ export default function RootLayout({
       <head>
         <style>{`
           @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+          @import url('https://use.typekit.net/your-id.css'); /* Replace with actual TypeKit ID for Gotham and Idlewild */
         `}</style>
       </head>
       <body className="font-sans antialiased">{children}</body>
