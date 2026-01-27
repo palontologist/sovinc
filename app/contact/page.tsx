@@ -18,8 +18,8 @@ export default function Contact() {
     {
       id: "email",
       label: "",
-      value: "contact@sov.inc",
-      link: "mailto:contact@sov.inc",
+      value: "hello@sovinc.co",
+      link: "mailto:hello@sovinc.co",
       icon: "/gmail.png",
     },
     {
@@ -46,7 +46,7 @@ export default function Contact() {
         <div className="max-w-3xl w-full">
           <div className="text-center mb-12">
             <h1 style={{ fontFamily: "Playfair Display", fontSize: "2.5rem" }} className="font-medium text-foreground">
-              Get in Touch
+              Contact
             </h1>
             <p className="text-sm text-muted-foreground mt-3 tracking-wide">
               Reach out to discuss your web3 infrastructure needs

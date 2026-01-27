@@ -12,20 +12,20 @@ export function MuxVideoSlideshow() {
       <style jsx>{`
         @media (max-width: 768px) and (orientation: portrait) {
           .mobile-portrait-video {
-            width: 100vh !important;
-            height: 100vw !important;
+            width: 100vw !important;
+            height: 177.78vw !important; /* 9:16 aspect ratio (100 * 16/9 = 177.78) */
             top: 50% !important;
             left: 50% !important;
-            transform: translate(-50%, -50%) rotate(90deg) !important;
+            transform: translate(-50%, -50%) !important;
           }
         }
         @media (max-width: 1024px) and (orientation: portrait) {
           .mobile-portrait-video {
-            width: 100vh !important;
-            height: 100vw !important;
+            width: 100vw !important;
+            height: 177.78vw !important; /* 9:16 aspect ratio */
             top: 50% !important;
             left: 50% !important;
-            transform: translate(-50%, -50%) rotate(90deg) !important;
+            transform: translate(-50%, -50%) !important;
           }
         }
       `}</style>
