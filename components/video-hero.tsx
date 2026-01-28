@@ -1,6 +1,56 @@
 "use client"
 
+import { useEffect, useRef, useState } from "react"
+
 export function VideoHero() {
+  const [currentVideo, setCurrentVideo] = useState(0)
+  const [isClient, setIsClient] = useState(false)
+  
+  // Replace these with your actual 3 videos
+  const desktopVideos = ["/open.mp4", "/bank.mp4", "/open.mp4"] 
+  const mobileVideos = ["/bank.mp4", "/open.mp4", "/bank.mp4"]
+  
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const mobileVideoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isClient) return
+    
+    const setupVideo = (video: HTMLVideoElement | null) => {
+      if (!video) return
+      
+      const handleVideoEnd = () => {
+        setCurrentVideo((prev) => (prev + 1) % 3)
+      }
+
+      video.addEventListener('ended', handleVideoEnd)
+      video.playbackRate = 0.75 // Slow motion effect
+      
+      return () => {
+        video.removeEventListener('ended', handleVideoEnd)
+      }
+    }
+
+    const desktopCleanup = setupVideo(videoRef.current)
+    const mobileCleanup = setupVideo(mobileVideoRef.current)
+    
+    return () => {
+      desktopCleanup?.()
+      mobileCleanup?.()
+    }
+  }, [isClient, currentVideo])
+
+  useEffect(() => {
+    if (!isClient) return
+    
+    videoRef.current?.play()
+    mobileVideoRef.current?.play()
+  }, [currentVideo, isClient])
+
   return (
     <>
       <style jsx>{`
@@ -58,20 +108,22 @@ export function VideoHero() {
       
       <div className="video-container">
         <video
+          ref={videoRef}
           className="video-desktop"
           autoPlay
           muted
-          loop
           playsInline
-          src="/open.mp4"
+          key={desktopVideos[currentVideo]}
+          src={desktopVideos[currentVideo]}
         />
         <video
+          ref={mobileVideoRef}
           className="video-mobile"
           autoPlay
           muted
-          loop
           playsInline
-          src="/bank.mp4"
+          key={mobileVideos[currentVideo]}
+          src={mobileVideos[currentVideo]}
         />
       </div>
     </>

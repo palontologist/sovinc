@@ -32,7 +32,7 @@ export function Navigation() {
               priority
               className="object-contain"
             />
-            <span className={`font-major text-lg font-bold tracking-wide ${textColorBase} hidden sm:inline`} style={{ letterSpacing: '0.05em' }}>SOV</span>
+            <span className={`font-montserrat text-lg font-bold tracking-wide ${textColorBase} hidden sm:inline`} style={{ letterSpacing: '0.05em' }}>SOVINC</span>
           </Link>
 
           <div className="flex gap-8 md:gap-12 items-center">
@@ -57,7 +57,7 @@ export function Navigation() {
                   ? `${textColorBase} border-[#008080]`
                   : `${textColorMuted} border-transparent hover:${textColorBase} hover:border-[#008080]`
               }`}
-              className="font-minor"
+              className="font-montserrat"
               aria-current={isActive("/about") ? "page" : undefined}
             >
               About
@@ -69,7 +69,7 @@ export function Navigation() {
                   ? `${textColorBase} border-[#008080]`
                   : `${textColorMuted} border-transparent hover:${textColorBase} hover:border-[#008080]`
               }`}
-              className="font-minor"
+              className="font-montserrat"
               aria-current={isActive("/contact") ? "page" : undefined}
             >
               Contact
