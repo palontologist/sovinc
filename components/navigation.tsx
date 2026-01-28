@@ -52,24 +52,22 @@ export function Navigation() {
             </Link>
             <Link
               href="/about"
-              className={`text-xs uppercase tracking-widest font-medium transition-all duration-300 pb-2 border-b-2 ${
+              className={`font-montserrat text-xs uppercase tracking-widest font-medium transition-all duration-300 pb-2 border-b-2 ${
                 isActive("/about")
                   ? `${textColorBase} border-[#008080]`
                   : `${textColorMuted} border-transparent hover:${textColorBase} hover:border-[#008080]`
               }`}
-              className="font-montserrat"
               aria-current={isActive("/about") ? "page" : undefined}
             >
               About
             </Link>
             <Link
               href="/contact"
-              className={`text-xs uppercase tracking-widest font-medium transition-all duration-300 pb-2 border-b-2 ${
+              className={`font-montserrat text-xs uppercase tracking-widest font-medium transition-all duration-300 pb-2 border-b-2 ${
                 isActive("/contact")
                   ? `${textColorBase} border-[#008080]`
                   : `${textColorMuted} border-transparent hover:${textColorBase} hover:border-[#008080]`
               }`}
-              className="font-montserrat"
               aria-current={isActive("/contact") ? "page" : undefined}
             >
               Contact
