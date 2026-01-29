@@ -47,7 +47,7 @@ export default function Contact() {
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-4 mb-4">
               <div className="w-1 h-10 rounded-full" style={{ backgroundColor: '#008080' }} />
-              <span className="font-montserrat text-xs uppercase tracking-widest font-semibold text-black">Contact</span>
+            
             </div>
             <h1 className="font-montserrat font-light text-5xl md:text-6xl text-black mb-6">Contact</h1>
             <p className="font-avenir text-base text-black/70">
