@@ -17,21 +17,21 @@ export default function Contact() {
   const contactMethods: ContactChip[] = [
     {
       id: "email",
-      label: "@",
-      value: "hello@sovinc.co",
-      link: "mailto:hello@sovinc.co",
+      label: "",
+      value: "contact@sov.inc",
+      link: "mailto:contact@sov.co",
       icon: "/mail.png",
     },
     {
       id: "linkedin",
-      label: "LinkedIn",
+      label: "",
       value: "Emmanuel Alamu",
       link: "https://linkedin.com/in/emmanuelalamu",
       icon: "/linkedin.png",
     },
     {
       id: "instagram",
-       label: "IG", 
+       label: "", 
       value: "@mannysov",
       link: "https://instagram.com/mannysov",
       icon: "/instagram.png",
@@ -45,12 +45,10 @@ export default function Contact() {
       <div className="flex-1 flex flex-col items-center justify-center px-6 md:px-12 pt-20">
         <div className="max-w-3xl w-full">
           <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <div className="w-1 h-10 rounded-full" style={{ backgroundColor: '#008080' }} />
-              <span className="font-montserrat text-xs uppercase tracking-widest font-semibold text-black">Contact</span>
-            </div>
-            <h1 className="font-montserrat font-light text-5xl md:text-6xl text-black mb-6">Contact</h1>
-            <p className="font-avenir text-base text-black/70">
+            <h1 style={{ fontFamily: "Playfair Display", fontSize: "2.5rem" }} className="font-medium text-foreground">
+              Get in Touch
+            </h1>
+            <p className="text-sm text-muted-foreground mt-3 tracking-wide">
               Reach out to discuss your web3 infrastructure needs
             </p>
           </div>
@@ -70,15 +68,15 @@ export default function Contact() {
               >
                 <img src={method.icon} alt={method.label} className="w-12 h-12 mx-auto mb-3 opacity-75 group-hover:opacity-100 transition-opacity" />
                 <p
-                  className={`font-avenir text-xs uppercase tracking-widest font-semibold transition-colors duration-300 ${
-                    hoveredChip === method.id ? "text-accent" : "text-black/50"
+                  className={`text-xs uppercase tracking-widest font-semibold transition-colors duration-300 ${
+                    hoveredChip === method.id ? "text-accent" : "text-muted-foreground"
                   }`}
                 >
                   {method.label}
                 </p>
                 <p
-                  className={`font-avenir text-base font-medium mt-3 transition-colors duration-300 ${
-                    hoveredChip === method.id ? "text-accent" : "text-black"
+                  className={`text-base font-medium mt-3 transition-colors duration-300 ${
+                    hoveredChip === method.id ? "text-accent" : "text-foreground"
                   }`}
                 >
                   {method.value}

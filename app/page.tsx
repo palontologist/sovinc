@@ -31,7 +31,7 @@ export default function Home() {
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
             className="font-avenir font-medium text-white mb-8 leading-tight animate-fade-in animation-delay-100"
           >
-            Facilitating greater sovereignty<br />in a decentralised future
+            Facilitating greater sovereignty.<br />In a decentralised future.
           </h1>
 
           {/* Description Paragraphs */}
