@@ -27,12 +27,12 @@ export default function Home() {
           </p>
 
           {/* Main Heading */}
-          <h2
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
+            <h1
+            style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)" }}
             className="font-avenir font-medium text-white mb-8 leading-tight animate-fade-in animation-delay-100"
-          >
+            >
             Facilitating greater sovereignty <br /> in a decentralised future.
-          </h2>
+            </h1>
 
           {/* Description Paragraphs */}
           <p className="font-avenir text-base text-white/90 mb-6 leading-relaxed max-w-lg animate-fade-in animation-delay-200">
