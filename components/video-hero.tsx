@@ -7,8 +7,8 @@ export function VideoHero() {
   const [isClient, setIsClient] = useState(false)
   
   // Replace these with your actual 3 videos
-  const desktopVideos = ["/open.mp4", "/bank.mp4", "/open.mp4"] 
-  const mobileVideos = ["/bank.mp4", "/open.mp4", "/bank.mp4"]
+  const desktopVideos = ["/bank.mp4", "/scroll.mp4", "/open.mp4"] 
+  const mobileVideos = ["/bank.mp4", "/scroll.mp4", "/open.mp4"]
   
   const videoRef = useRef<HTMLVideoElement>(null)
   const mobileVideoRef = useRef<HTMLVideoElement>(null)
