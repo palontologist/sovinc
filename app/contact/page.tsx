@@ -17,21 +17,21 @@ export default function Contact() {
   const contactMethods: ContactChip[] = [
     {
       id: "email",
-      label: "@",
+      label: "",
       value: "hello@sovinc.co",
       link: "mailto:hello@sovinc.co",
       icon: "/mail.png",
     },
     {
       id: "linkedin",
-      label: "LinkedIn",
+      label: "",
       value: "Emmanuel Alamu",
       link: "https://linkedin.com/in/emmanuelalamu",
       icon: "/linkedin.png",
     },
     {
       id: "instagram",
-       label: "IG", 
+       label: "", 
       value: "@mannysov",
       link: "https://instagram.com/mannysov",
       icon: "/instagram.png",
