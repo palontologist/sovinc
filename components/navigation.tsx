@@ -52,10 +52,10 @@ export function Navigation() {
             </Link>
             <Link
               href="/about"
-              className={`font-montserrat text-xs uppercase tracking-widest font-medium transition-all duration-300 pb-2 border-b-2 ${
+              className={`font-montserrat text-xs uppercase tracking-widest font-medium transition-all duration-300 ${
                 isActive("/about")
-                  ? `${textColorBase} border-[#008080]`
-                  : `${textColorMuted} border-transparent hover:${textColorBase} hover:border-[#008080]`
+                  ? `${textColorBase}`
+                  : `${textColorMuted} hover:${textColorBase}`
               }`}
               aria-current={isActive("/about") ? "page" : undefined}
             >
@@ -63,10 +63,10 @@ export function Navigation() {
             </Link>
             <Link
               href="/contact"
-              className={`font-montserrat text-xs uppercase tracking-widest font-medium transition-all duration-300 pb-2 border-b-2 ${
+              className={`font-montserrat text-xs uppercase tracking-widest font-medium transition-all duration-300 ${
                 isActive("/contact")
-                  ? `${textColorBase} border-[#008080]`
-                  : `${textColorMuted} border-transparent hover:${textColorBase} hover:border-[#008080]`
+                  ? `${textColorBase}`
+                  : `${textColorMuted} hover:${textColorBase}`
               }`}
               aria-current={isActive("/contact") ? "page" : undefined}
             >

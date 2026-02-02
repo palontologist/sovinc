@@ -42,16 +42,13 @@ export default function Contact() {
     <div className="w-full h-screen flex flex-col overflow-hidden bg-background">
       <Navigation />
 
-      <div className="flex-1 flex flex-col items-center justify-center px-6 md:px-12 pt-20">
+      <div className="flex-1 flex flex-col items-center justify-center px-6 md:px-12 pt-20 pb-16">
         <div className="max-w-3xl w-full">
           <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <div className="w-1 h-10 rounded-full" style={{ backgroundColor: '#008080' }} />
-            
-            </div>
+            <p className="font-montserrat text-xs text-black/50 mb-4"></p>
             <h1 className="font-montserrat font-light text-5xl md:text-6xl text-black mb-6">Contact</h1>
             <p className="font-avenir text-base text-black/70">
-              Reach out to discuss your web3 infrastructure needs
+              Message me to discuss your web3 infrastructure needs
             </p>
           </div>
 
@@ -77,8 +74,8 @@ export default function Contact() {
                    {method.label}
                  </p>
                  <p
-                   className={`font-avenir text-base font-medium mt-3 transition-colors duration-300 ${
-                     hoveredChip === method.id ? "text-accent" : "text-black"
+                   className={`font-avenir text-base font-light mt-3 transition-colors duration-300 ${
+                     hoveredChip === method.id ? "text-accent" : "text-black/70"
                    }`}
                  >
                    {method.value}
@@ -88,6 +85,12 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      
+      <footer className="w-full py-4 text-center">
+        <p className="font-montserrat text-black/60" style={{ fontWeight: 200, fontSize: '0.75rem' }}>
+          © 2026 SOV Solutions FZE LLC - All Rights Reserved.
+        </p>
+      </footer>
     </div>
   )
 }

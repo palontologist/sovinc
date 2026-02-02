@@ -6,9 +6,9 @@ export function VideoHero() {
   const [currentVideo, setCurrentVideo] = useState(0)
   const [isClient, setIsClient] = useState(false)
   
-  // Replace these with your actual 3 videos
-  const desktopVideos = ["/bank.mp4", "/scroll.mp4", "/open.mp4"] 
-  const mobileVideos = ["/bank.mp4", "/scroll.mp4", "/open.mp4"]
+  // 5 video clips, 5 seconds each, slow-motion
+  const desktopVideos = ["/car.mp4", "/build.mp4", "/city.mp4", "/con.mp4", "/wild.mp4"] 
+  const mobileVideos = ["/car.mp4", "/build.mp4", "/city.mp4", "/con.mp4", "/wild.mp4"]
   
   const videoRef = useRef<HTMLVideoElement>(null)
   const mobileVideoRef = useRef<HTMLVideoElement>(null)
@@ -23,15 +23,15 @@ export function VideoHero() {
     const setupVideo = (video: HTMLVideoElement | null) => {
       if (!video) return
       
-      const handleVideoEnd = () => {
-        setCurrentVideo((prev) => (prev + 1) % 3)
-      }
+      // Set up 5 second timer to switch videos
+      const timer = setTimeout(() => {
+        setCurrentVideo((prev) => (prev + 1) % 5)
+      }, 5000) // 5 seconds
 
-      video.addEventListener('ended', handleVideoEnd)
       video.playbackRate = 0.75 // Slow motion effect
       
       return () => {
-        video.removeEventListener('ended', handleVideoEnd)
+        clearTimeout(timer)
       }
     }
 
@@ -113,7 +113,7 @@ export function VideoHero() {
           autoPlay
           muted
           playsInline
-          key={desktopVideos[currentVideo]}
+          key={`desktop-${desktopVideos[currentVideo]}`}
           src={desktopVideos[currentVideo]}
         />
         <video
@@ -122,7 +122,7 @@ export function VideoHero() {
           autoPlay
           muted
           playsInline
-          key={mobileVideos[currentVideo]}
+          key={`mobile-${mobileVideos[currentVideo]}`}
           src={mobileVideos[currentVideo]}
         />
       </div>
