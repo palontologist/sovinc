@@ -6,9 +6,9 @@ export function VideoHero() {
   const [currentVideo, setCurrentVideo] = useState(0)
   const [isClient, setIsClient] = useState(false)
   
-  // 5 video clips, 5 seconds each, slow-motion
-  const desktopVideos = ["/car.mp4", "/build.mp4", "/city.mp4", "/con.mp4", "/wild.mp4"] 
-  const mobileVideos = ["/car.mp4", "/build.mp4", "/city.mp4", "/con.mp4", "/wild.mp4"]
+  // 5 video clips, 5 seconds each, slow-motion: road, run, villas, build, car
+  const desktopVideos = ["/road.mp4", "/run.mp4", "/villas.mp4", "/build.mp4", "/car.mp4"] 
+  const mobileVideos = ["/road.mp4", "/run.mp4", "/villas.mp4", "/build.mp4", "/car.mp4"]
   
   const videoRef = useRef<HTMLVideoElement>(null)
   const mobileVideoRef = useRef<HTMLVideoElement>(null)
@@ -113,6 +113,7 @@ export function VideoHero() {
           autoPlay
           muted
           playsInline
+          crossOrigin="anonymous"
           key={`desktop-${desktopVideos[currentVideo]}`}
           src={desktopVideos[currentVideo]}
         />
@@ -122,9 +123,8 @@ export function VideoHero() {
           autoPlay
           muted
           playsInline
-          key={`mobile-${mobileVideos[currentVideo]}`}
-          src={mobileVideos[currentVideo]}
-        />
+          crossOrigin="anonymous"
+          
       </div>
     </>
   )
