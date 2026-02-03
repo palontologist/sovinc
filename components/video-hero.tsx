@@ -124,7 +124,9 @@ export function VideoHero() {
           muted
           playsInline
           crossOrigin="anonymous"
-          
+          key={`mobile-${mobileVideos[currentVideo]}`}
+          src={mobileVideos[currentVideo]}
+        />
       </div>
     </>
   )
