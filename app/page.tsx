@@ -35,7 +35,7 @@ export default function Home() {
             </h1>
 
           {/* Description Paragraphs */}
-          <p className="font-avenir text-base text-white/90 mb-6 leading-relaxed max-w-lg animate-fade-in animation-delay-200">
+          <p style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="text-base text-white/90 mb-6 leading-relaxed max-w-lg animate-fade-in animation-delay-200">
             Helping MSMEs shift from legacy systems to Web3‑native, on‑chain infrastructure for greater ownership & sovereignty.
           </p>
 
@@ -44,7 +44,8 @@ export default function Home() {
             href="/contact"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className={`inline-block px-8 py-3 border-2 rounded-sm font-avenir font-semibold uppercase text-xs tracking-widest transition-all duration-300 animate-fade-in animation-delay-400 ${
+            style={{ fontFamily: "'Josefin Sans', sans-serif" }}
+            className={`inline-block px-8 py-3 border-2 rounded-sm font-semibold uppercase text-xs tracking-widest transition-all duration-300 animate-fade-in animation-delay-400 ${
               isHovered
                 ? "bg-accent text-white border-accent shadow-lg shadow-accent/20"
                 : "bg-transparent text-white border-white hover:border-accent/80"

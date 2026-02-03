@@ -46,8 +46,8 @@ export default function Contact() {
         <div className="max-w-3xl w-full">
           <div className="text-center mb-12">
             <p className="font-montserrat text-xs text-black/50 mb-4"></p>
-            <h1 className="font-montserrat font-light text-5xl md:text-6xl text-black mb-6">Contact</h1>
-            <p className="font-avenir text-base text-black/70">
+            <h1 style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="font-light text-5xl md:text-6xl text-black mb-6">Contact</h1>
+            <p style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="text-base text-black/70">
               Message me to discuss your web3 infrastructure needs
             </p>
           </div>
@@ -74,7 +74,8 @@ export default function Contact() {
                    {method.label}
                  </p>
                  <p
-                   className={`font-avenir text-base font-light mt-3 transition-colors duration-300 ${
+                   style={{ fontFamily: "'Josefin Sans', sans-serif" }}
+                   className={`text-base font-light mt-3 transition-colors duration-300 ${
                      hoveredChip === method.id ? "text-accent" : "text-black/70"
                    }`}
                  >
