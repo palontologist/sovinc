@@ -28,6 +28,11 @@ export default function About() {
           </div>
         </div>
       </div>
+            <footer className="w-full py-4 text-center">
+        <p className="font-montserrat text-black/60" style={{ fontWeight: 200, fontSize: '0.75rem' }}>
+          © 2026 SOV Solutions FZE LLC - All Rights Reserved.
+        </p>
+      </footer>
     </div>
   )
 }

@@ -35,7 +35,7 @@ export default function Home() {
             </h1>
 
           {/* Description Paragraphs */}
-          <p style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="text-base text-white/90 mb-6 leading-relaxed max-w-lg animate-fade-in animation-delay-200">
+          <p style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="text-lg text-white/90 mb-6 leading-relaxed max-w-lg animate-fade-in animation-delay-200">
             Helping MSMEs shift from legacy systems to Web3‑native, on‑chain infrastructure for greater ownership & sovereignty.
           </p>
 
