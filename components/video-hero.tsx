@@ -4,14 +4,18 @@ import { useEffect, useRef, useState } from "react"
 
 export function VideoHero() {
   const [currentVideo, setCurrentVideo] = useState(0)
+  const [nextVideo, setNextVideo] = useState(1)
+  const [activeLayer, setActiveLayer] = useState<'front' | 'back'>('front')
   const [isClient, setIsClient] = useState(false)
   
   // 5 video clips, 5 seconds each, slow-motion: road, run, villas, build, car
   const desktopVideos = ["/road.mp4", "/run.mp4", "/villas.mp4", "/build.mp4", "/car.mp4"] 
   const mobileVideos = ["/road.mp4", "/run.mp4", "/villas.mp4", "/build.mp4", "/car.mp4"]
   
-  const videoRef = useRef<HTMLVideoElement>(null)
-  const mobileVideoRef = useRef<HTMLVideoElement>(null)
+  const frontDesktopRef = useRef<HTMLVideoElement>(null)
+  const backDesktopRef = useRef<HTMLVideoElement>(null)
+  const frontMobileRef = useRef<HTMLVideoElement>(null)
+  const backMobileRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     setIsClient(true)
@@ -20,36 +24,26 @@ export function VideoHero() {
   useEffect(() => {
     if (!isClient) return
     
-    const setupVideo = (video: HTMLVideoElement | null) => {
-      if (!video) return
+    // Set playback rate for all videos
+    const videos = [frontDesktopRef.current, backDesktopRef.current, frontMobileRef.current, backMobileRef.current]
+    videos.forEach(video => {
+      if (video) video.playbackRate = 0.75
+    })
+
+    // Start crossfade after 4 seconds (before video ends)
+    const timer = setTimeout(() => {
+      // Toggle active layer - this triggers CSS fade
+      setActiveLayer(prev => prev === 'front' ? 'back' : 'front')
       
-      // Set up 5 second timer to switch videos
-      const timer = setTimeout(() => {
-        setCurrentVideo((prev) => (prev + 1) % 5)
-      }, 5000) // 5 seconds
+      // After fade completes (1s), update video indices for next cycle
+      setTimeout(() => {
+        setCurrentVideo(nextVideo)
+        setNextVideo((nextVideo + 1) % 5)
+      }, 1000)
+    }, 4000) // Start fade at 4s, so it completes by 5s
 
-      video.playbackRate = 0.75 // Slow motion effect
-      
-      return () => {
-        clearTimeout(timer)
-      }
-    }
-
-    const desktopCleanup = setupVideo(videoRef.current)
-    const mobileCleanup = setupVideo(mobileVideoRef.current)
-    
-    return () => {
-      desktopCleanup?.()
-      mobileCleanup?.()
-    }
-  }, [isClient, currentVideo])
-
-  useEffect(() => {
-    if (!isClient) return
-    
-    videoRef.current?.play()
-    mobileVideoRef.current?.play()
-  }, [currentVideo, isClient])
+    return () => clearTimeout(timer)
+  }, [isClient, currentVideo, nextVideo])
 
   return (
     <>
@@ -107,33 +101,82 @@ export function VideoHero() {
       `}</style>
       
       <div className="video-container">
+        {/* Desktop Videos - Front and Back layers for crossfade */}
         <video
-          ref={videoRef}
+          ref={frontDesktopRef}
           className="video-desktop"
+          style={{
+            opacity: activeLayer === 'front' ? 1 : 0,
+            transition: 'opacity 1s ease-in-out',
+            zIndex: activeLayer === 'front' ? 2 : 1
+          }}
           autoPlay
           muted
           playsInline
           preload="auto"
           crossOrigin="anonymous"
-          key={`desktop-${desktopVideos[currentVideo]}`}
-          src={desktopVideos[currentVideo]}
+          key={`desktop-front-${desktopVideos[activeLayer === 'front' ? currentVideo : nextVideo]}`}
+          src={desktopVideos[activeLayer === 'front' ? currentVideo : nextVideo]}
           onError={(e) => {
-            // Suppress abort errors during video switching
             console.log('Video loading interrupted (normal during transitions)')
           }}
         />
         <video
-          ref={mobileVideoRef}
-          className="video-mobile"
+          ref={backDesktopRef}
+          className="video-desktop"
+          style={{
+            opacity: activeLayer === 'back' ? 1 : 0,
+            transition: 'opacity 1s ease-in-out',
+            zIndex: activeLayer === 'back' ? 2 : 1
+          }}
           autoPlay
           muted
           playsInline
           preload="auto"
           crossOrigin="anonymous"
-          key={`mobile-${mobileVideos[currentVideo]}`}
-          src={mobileVideos[currentVideo]}
+          key={`desktop-back-${desktopVideos[activeLayer === 'back' ? currentVideo : nextVideo]}`}
+          src={desktopVideos[activeLayer === 'back' ? currentVideo : nextVideo]}
           onError={(e) => {
-            // Suppress abort errors during video switching
+            console.log('Video loading interrupted (normal during transitions)')
+          }}
+        />
+        
+        {/* Mobile Videos - Front and Back layers for crossfade */}
+        <video
+          ref={frontMobileRef}
+          className="video-mobile"
+          style={{
+            opacity: activeLayer === 'front' ? 1 : 0,
+            transition: 'opacity 1s ease-in-out',
+            zIndex: activeLayer === 'front' ? 2 : 1
+          }}
+          autoPlay
+          muted
+          playsInline
+          preload="auto"
+          crossOrigin="anonymous"
+          key={`mobile-front-${mobileVideos[activeLayer === 'front' ? currentVideo : nextVideo]}`}
+          src={mobileVideos[activeLayer === 'front' ? currentVideo : nextVideo]}
+          onError={(e) => {
+            console.log('Video loading interrupted (normal during transitions)')
+          }}
+        />
+        <video
+          ref={backMobileRef}
+          className="video-mobile"
+          style={{
+            opacity: activeLayer === 'back' ? 1 : 0,
+            transition: 'opacity 1s ease-in-out',
+            zIndex: activeLayer === 'back' ? 2 : 1
+          }}
+          autoPlay
+          muted
+          playsInline
+          preload="auto"
+          crossOrigin="anonymous"
+          key={`mobile-back-${mobileVideos[activeLayer === 'back' ? currentVideo : nextVideo]}`}
+          src={mobileVideos[activeLayer === 'back' ? currentVideo : nextVideo]}
+          onError={(e) => {
             console.log('Video loading interrupted (normal during transitions)')
           }}
         />
