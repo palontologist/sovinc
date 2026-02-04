@@ -113,9 +113,14 @@ export function VideoHero() {
           autoPlay
           muted
           playsInline
+          preload="auto"
           crossOrigin="anonymous"
           key={`desktop-${desktopVideos[currentVideo]}`}
           src={desktopVideos[currentVideo]}
+          onError={(e) => {
+            // Suppress abort errors during video switching
+            console.log('Video loading interrupted (normal during transitions)')
+          }}
         />
         <video
           ref={mobileVideoRef}
@@ -123,9 +128,14 @@ export function VideoHero() {
           autoPlay
           muted
           playsInline
+          preload="auto"
           crossOrigin="anonymous"
           key={`mobile-${mobileVideos[currentVideo]}`}
           src={mobileVideos[currentVideo]}
+          onError={(e) => {
+            // Suppress abort errors during video switching
+            console.log('Video loading interrupted (normal during transitions)')
+          }}
         />
       </div>
     </>
