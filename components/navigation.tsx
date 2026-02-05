@@ -25,14 +25,14 @@ export function Navigation() {
             aria-label="SOVINC Home"
           >
             <Image
-              src="/logo.png"
+              src="/sovvv.png"
               alt="SOV Logo"
               width={40}
               height={40}
               priority
               className="object-contain"
             />
-            <span className={`font-montserrat text-lg font-bold tracking-wide ${textColorBase} hidden sm:inline`} style={{ letterSpacing: '0.05em' }}>SOVINC</span>
+            <span className={`font-gruppo text-lg font-normal tracking-wide ${textColorBase} hidden sm:inline`} style={{ letterSpacing: '0.05em' }}>SOVINC</span>
           </Link>
 
           <div className="flex gap-8 md:gap-12 items-center">
