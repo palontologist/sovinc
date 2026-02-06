@@ -12,6 +12,8 @@ export function VideoHero() {
         muted
         playsInline
         nohotkeys
+        thumbnailTime={0}
+        startTime={0}
         style={{
           position: 'absolute',
           inset: '0',
