@@ -42,7 +42,7 @@ export function VideoHero() {
           '--top-bar': 'none',
           '--center-controls': 'none',
           '--bottom-bar': 'none',
-        } as React.CSSProperties}
+        } as Record<string, string | number>}
       />
     </div>
   )
