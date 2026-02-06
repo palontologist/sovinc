@@ -14,10 +14,9 @@ export function VideoHero() {
         nohotkeys
         style={{
           position: 'absolute',
-          inset: 0,
+          inset: '0',
           width: '100%',
           height: '100%',
-          // These CSS custom properties override Mux Player internals
           '--media-object-fit': 'cover',
           '--media-object-position': 'center',
           '--controls': 'none',
@@ -42,7 +41,7 @@ export function VideoHero() {
           '--top-bar': 'none',
           '--center-controls': 'none',
           '--bottom-bar': 'none',
-        } as Record<string, string | number>}
+        }}
       />
     </div>
   )
