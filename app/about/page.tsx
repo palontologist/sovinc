@@ -14,7 +14,7 @@ export default function About() {
 
             <div className="space-y-6">
               <p style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="text-base leading-relaxed text-black/90 text-center">
-                SOV Solutions, d.b.a. <em style={{ fontStyle: 'italic', fontWeight: 600 }}>SOVINC</em>, was founded & incorporated in the United Arab Emirates by Emmanuel Alamu in 2024.
+                SOV Solutions, d.b.a. <em style={{ fontStyle: 'italic', fontWeight: 400 }}>SOVINC</em>, was founded & incorporated in the United Arab Emirates by Emmanuel Alamu in 2024.
               </p>
 
               <p style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="text-base leading-relaxed text-black/90 text-center">
@@ -22,7 +22,7 @@ export default function About() {
               </p>
 
               <p style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="text-base leading-relaxed text-black/90 text-center">
-                The core mission is to both enable & accelerate the integration of MSMEs with the coming '<em style={{ fontStyle: 'italic', fontWeight: 600 }}>cybereconomy</em>' at the fruition of the Information Age, and pave the way for a new paradigm built on novel web3 technologies; an era established with greater sovereignty for small businesses and ultimately, the individual.
+                The core mission is to both enable & accelerate the integration of MSMEs with the coming '<em style={{ fontStyle: 'italic', fontWeight: 400 }}>cybereconomy</em>' at the fruition of the Information Age, and pave the way for a new paradigm built on novel web3 technologies; an era established with greater sovereignty for small businesses and ultimately, the individual.
               </p>
             </div>
           </div>

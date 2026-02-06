@@ -13,6 +13,7 @@ export function Navigation() {
   const isHome = pathname === "/"
   const textColorBase = isHome ? "text-white" : "text-black"
   const textColorMuted = isHome ? "text-white/70" : "text-black/70"
+  const hoverColor = "hover:text-accent"
   const bgColor = isHome ? "bg-white/5 backdrop-blur-xl border-b border-white/10" : "bg-transparent border-b border-black/10"
 
   return (
@@ -38,15 +39,15 @@ export function Navigation() {
           <div className="flex gap-8 md:gap-12 items-center">
             <Link
               href="/"
-              className={`hover:opacity-80 transition-opacity duration-300 flex items-center justify-center ${
+              className={`transition-all duration-300 flex items-center justify-center ${
                 isActive("/")
-                  ? `opacity-100`
-                  : `opacity-70`
+                  ? `text-accent opacity-100`
+                  : `${textColorBase} ${hoverColor} opacity-70 hover:opacity-100`
               }`}
               aria-label="Home"
               aria-current={isActive("/") ? "page" : undefined}
             >
-              <svg className={`w-5 h-5 ${textColorBase}`} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
               </svg>
             </Link>
@@ -54,8 +55,8 @@ export function Navigation() {
               href="/about"
               className={`font-montserrat text-xs uppercase tracking-widest font-medium transition-all duration-300 ${
                 isActive("/about")
-                  ? `${textColorBase}`
-                  : `${textColorMuted} hover:${textColorBase}`
+                  ? `text-accent`
+                  : `${textColorMuted} ${hoverColor}`
               }`}
               aria-current={isActive("/about") ? "page" : undefined}
             >
@@ -65,8 +66,8 @@ export function Navigation() {
               href="/contact"
               className={`font-montserrat text-xs uppercase tracking-widest font-medium transition-all duration-300 ${
                 isActive("/contact")
-                  ? `${textColorBase}`
-                  : `${textColorMuted} hover:${textColorBase}`
+                  ? `text-accent`
+                  : `${textColorMuted} ${hoverColor}`
               }`}
               aria-current={isActive("/contact") ? "page" : undefined}
             >
