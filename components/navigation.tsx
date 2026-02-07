@@ -33,7 +33,7 @@ export function Navigation() {
               priority
               className="object-contain"
             />
-            <span className={`font-gruppo text-lg font-normal tracking-wide ${textColorBase} hidden sm:inline`} style={{ letterSpacing: '0.05em' }}>SOVINC</span>
+            <span className={`font-gruppo text-lg font-normal tracking-wide ${textColorBase}`} style={{ letterSpacing: '0.05em' }}>SOVINC</span>
           </Link>
 
           <div className="flex gap-8 md:gap-12 items-center">
