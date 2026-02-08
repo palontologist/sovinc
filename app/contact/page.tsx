@@ -42,17 +42,14 @@ export default function Contact() {
     <div className="w-full h-screen flex flex-col overflow-hidden bg-background">
       <Navigation />
 
-      <div className="flex-1 flex flex-col items-center justify-center px-6 md:px-12 pt-20 pb-16">
+      <div className="flex-1 flex flex-col items-center justify-center px-6 md:px-12 pt-20 pb-4">
         <div className="max-w-3xl w-full">
-          <div className="text-center mb-12">
-            <p className="font-montserrat text-xs text-black/50 mb-4"></p>
-            <h1 style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="font-light text-5xl md:text-6xl text-black mb-6">Contact</h1>
-            <p style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="text-base text-black/90">
+          <h1 style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="font-light text-5xl md:text-6xl text-black text-center mb-6 md:mb-8">Contact</h1>
+          <p style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="text-sm md:text-base text-black/90 text-center mb-6 md:mb-8">
               Message me to discuss your web3 infrastructure needs
             </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {contactMethods.map((method) => (
               <a
                 key={method.id}
@@ -61,11 +58,11 @@ export default function Contact() {
                 rel={method.id !== "email" ? "noopener noreferrer" : undefined}
                 onMouseEnter={() => setHoveredChip(method.id)}
                 onMouseLeave={() => setHoveredChip(null)}
-                className={`p-6 rounded-lg border-2 transition-all duration-300 text-center group ${
+                className={`p-4 md:p-6 rounded-lg border-2 transition-all duration-300 text-center group ${
                   hoveredChip === method.id ? "border-accent bg-accent/5" : "border-border hover:border-accent/50"
                 }`}
               >
-                <img src={method.icon} alt={method.label} className="w-12 h-12 mx-auto mb-3 opacity-75 group-hover:opacity-100 transition-opacity" />
+                <img src={method.icon} alt={method.label} className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 md:mb-3 opacity-75 group-hover:opacity-100 transition-opacity" />
 <p
                    className={`font-avenir text-xs uppercase tracking-widest font-semibold transition-colors duration-300 ${
                      hoveredChip === method.id ? "text-accent" : "text-black/50"
@@ -75,7 +72,7 @@ export default function Contact() {
                  </p>
                  <p
                    style={{ fontFamily: "'Josefin Sans', sans-serif" }}
-                   className={`text-base font-light mt-3 transition-colors duration-300 ${
+                   className={`text-sm md:text-base font-light mt-2 md:mt-3 transition-colors duration-300 ${
                      hoveredChip === method.id ? "text-accent" : "text-black/90"
                    }`}
                  >
