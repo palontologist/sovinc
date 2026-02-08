@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "SOVINC | Sovereign Web3 Infrastructure",
+  title: "SOVINC | Web3 Infrastructure Consulting",
   description:
     "Enabling small businesses to operate on sovereign, on‑chain infrastructure instead of legacy financial rails.",
   icons: {
@@ -30,6 +30,7 @@ export default function RootLayout({
         <style>{`
           @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
           @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
           @import url('https://fonts.cdnfonts.com/css/avenir-next-lt-pro');
         `}</style>
       </head>
