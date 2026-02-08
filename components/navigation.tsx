@@ -36,10 +36,10 @@ export function Navigation() {
             <span className={`font-gruppo tracking-wide text-lg md:text-[25px] ${textColorBase}`} style={{ fontWeight: 400, letterSpacing: '0.05em' }}>SOVINC</span>
           </Link>
 
-          <div className="flex gap-8 md:gap-12 items-center">
+          <div className="flex gap-6 md:gap-12 items-center">
             <Link
               href="/"
-              className={`transition-all duration-300 flex items-center justify-center ${
+              className={`transition-all duration-300 flex items-center justify-center mr-2 md:mr-0 ${
                 isActive("/")
                   ? `text-accent opacity-100`
                   : `${textColorBase} ${hoverColor} opacity-70 hover:opacity-100`
