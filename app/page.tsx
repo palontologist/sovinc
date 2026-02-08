@@ -28,7 +28,7 @@ export default function Home() {
 
           {/* Main Heading */}
             <h1
-            style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontFamily: "'Josefin Sans', sans-serif", fontWeight: 300 }}
+            style={{ fontSize: "clamp(1.5rem, 4vw, 2.5rem)", fontFamily: "'Josefin Sans', sans-serif", fontWeight: 300 }}
             className="text-white mb-8 leading-tight animate-fade-in animation-delay-100"
             >
             Facilitating greater sovereignty <br /> in a decentralised future.
