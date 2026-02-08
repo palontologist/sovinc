@@ -6,7 +6,7 @@ export function VideoHero() {
   return (
     <div className="video-hero-container">
       <MuxPlayer
-        playbackId="Lw00beuiJybOoQc01IneWi9NtED6100MUM11tri1TkCOW00"
+        playbackId="eMR401SAitvFDGSDKYHOR00ihRskW4w5gY3pcU2uSGdMo"
         autoPlay="muted"
         loop
         muted
