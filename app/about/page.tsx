@@ -4,7 +4,7 @@ import { Navigation } from "@/components/navigation"
 
 export default function About() {
   return (
-    <div className="w-full h-screen flex flex-col overflow-hidden" style={{ backgroundColor: '#f5f5f5' }}>
+    <div className="w-full min-h-screen flex flex-col" style={{ backgroundColor: '#f5f5f5' }}>
       <Navigation />
 
       <div className="flex-1 flex items-center justify-center px-6 md:px-12 pt-20 pb-4 overflow-y-auto">
@@ -27,8 +27,8 @@ export default function About() {
 
         </div>
       </div>
-            <footer className="w-full py-4 text-center shrink-0">
-        <p className="font-montserrat text-black/60" style={{ fontWeight: 200, fontSize: '0.75rem' }}>
+     <footer className="w-full py-3 sm:py-4 text-center shrink-0">
+        <p className="font-montserrat text-black/60" style={{ fontWeight: 200, fontSize: '0.65rem' }}>
           © 2026 SOV Solutions FZE LLC - All Rights Reserved.
         </p>
       </footer>
