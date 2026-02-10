@@ -44,7 +44,7 @@ export default function Contact() {
 
       <div className="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 md:px-12 pt-16 sm:pt-20 pb-2 sm:pb-4">
         <div className="max-w-3xl w-full">
-          <h1 style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="font-light text-3xl sm:text-5xl md:text-6xl text-black text-center mb-4 sm:mb-6 md:mb-8">Contact</h1>
+          <h1 style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="font-light text-5xl md:text-6xl text-black text-center mb-4 sm:mb-6 md:mb-8">Contact</h1>
           <p style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="text-xs sm:text-sm md:text-base text-black/90 text-center mb-4 sm:mb-6 md:mb-8">
               Message me to discuss your web3 infrastructure needs
             </p>
@@ -85,7 +85,7 @@ export default function Contact() {
       </div>
       
       <footer className="w-full py-3 sm:py-4 text-center shrink-0">
-        <p className="font-montserrat text-black/60" style={{ fontWeight: 200, fontSize: '0.65rem' }}>
+        <p className="font-montserrat text-black/60 text-xs sm:text-[0.65rem]" style={{ fontWeight: 200 }}>
           © 2026 SOV Solutions FZE LLC - All Rights Reserved.
         </p>
       </footer>
