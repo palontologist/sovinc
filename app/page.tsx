@@ -21,7 +21,7 @@ export default function Home() {
         <div className="max-w-2xl">
           {/* Tagline */}
           <p
-            className="font-montserrat text-xs uppercase tracking-widest font-semibold text-white/80 mb-6 animate-fade-in"
+            className="font-montserrat text-[0.65rem] sm:text-xs uppercase tracking-widest font-semibold text-white/80 mb-4 sm:mb-6 animate-fade-in"
           >
             Web3 Strategy & Operations Consulting
           </p>
@@ -35,7 +35,7 @@ export default function Home() {
             </h1>
 
           {/* Description Paragraphs */}
-          <p style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="text-lg text-white/90 mb-6 leading-relaxed max-w-lg animate-fade-in animation-delay-200">
+          <p style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="text-base sm:text-lg text-white/90 mb-6 leading-relaxed max-w-lg animate-fade-in animation-delay-200">
             Helping MSMEs shift from legacy systems to Web3‑native, on‑chain infrastructure for greater ownership & sovereignty.
           </p>
 
