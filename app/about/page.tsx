@@ -9,7 +9,7 @@ export default function About() {
 
       <div className="flex-1 flex items-center justify-center px-6 md:px-12 pt-20 pb-4 overflow-y-auto">
         <div className="max-w-2xl w-full my-auto">
-          <h1 style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="font-light text-5xl md:text-6xl text-black text-center mb-6 md:mb-8">About</h1>
+          <h1 style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="font-light text-3xl sm:text-5xl md:text-6xl text-black text-center mb-6 md:mb-8">About</h1>
 
           <div className="space-y-6">
               <p style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="text-base leading-relaxed text-black/90 text-center">
