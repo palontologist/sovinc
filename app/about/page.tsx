@@ -4,10 +4,10 @@ import { Navigation } from "@/components/navigation"
 
 export default function About() {
   return (
-    <div className="w-full min-h-screen flex flex-col" style={{ backgroundColor: '#f5f5f5' }}>
+    <div className="w-full min-h-[100dvh] flex flex-col" style={{ backgroundColor: '#f5f5f5' }}>
       <Navigation />
 
-      <div className="flex-1 flex items-center justify-center px-6 md:px-12 pt-20 pb-4 overflow-y-auto">
+      <div className="flex-1 flex items-center justify-start px-6 md:px-12 pt-24 pb-8 sm:pb-12">
         <div className="max-w-2xl w-full my-auto">
           <h1 style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="font-light text-3xl sm:text-5xl md:text-6xl text-black text-center mb-6 md:mb-8">About</h1>
 
@@ -27,7 +27,7 @@ export default function About() {
 
         </div>
       </div>
-     <footer className="w-full py-3 sm:py-4 text-center shrink-0">
+     <footer className="w-full py-4 sm:py-6 text-center mt-auto shrink-0">
         <p className="font-montserrat text-black/60 text-xs sm:text-[0.65rem]" style={{ fontWeight: 200 }}>
           © 2026 SOV Solutions FZE LLC - All Rights Reserved.
         </p>

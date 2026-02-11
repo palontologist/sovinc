@@ -39,10 +39,10 @@ export default function Contact() {
   ]
 
   return (
-    <div className="w-full min-h-screen flex flex-col bg-background">
+    <div className="w-full min-h-[100dvh] flex flex-col bg-background">
       <Navigation />
 
-      <div className="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 md:px-12 pt-16 sm:pt-20 pb-2 sm:pb-4">
+      <div className="flex-1 flex flex-col items-center justify-start px-4 sm:px-6 md:px-12 pt-20 sm:pt-24 pb-8 sm:pb-12">
         <div className="max-w-3xl w-full">
           <h1 style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="font-light text-3xl sm:text-5xl md:text-6xl text-black text-center mb-6 sm:mb-8">Contact</h1>
       
@@ -85,7 +85,7 @@ export default function Contact() {
         </div>
       </div>
       
-      <footer className="w-full py-3 sm:py-4 text-center shrink-0">
+      <footer className="w-full py-4 sm:py-6 text-center mt-auto shrink-0">
         <p className="font-montserrat text-black/60 text-xs sm:text-[0.65rem]" style={{ fontWeight: 200 }}>
           © 2026 SOV Solutions FZE LLC - All Rights Reserved.
         </p>
