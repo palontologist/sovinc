@@ -42,11 +42,11 @@ export default function Contact() {
     <div className="w-full min-h-[100dvh] flex flex-col bg-background">
       <Navigation />
 
-      <div className="flex-1 flex flex-col items-center justify-start px-4 sm:px-6 md:px-12 pt-20 sm:pt-24 pb-8 sm:pb-12">
-        <div className="max-w-3xl w-full">
+      <div className="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 md:px-12 pt-24 pb-8 sm:pb-12">
+        <div className="max-w-3xl w-full my-auto">
           <h1 style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="font-light text-3xl sm:text-5xl md:text-6xl text-black text-center mb-6 sm:mb-8">Contact</h1>
       
-          <p style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="text-base text-black/90 text-center">
+          <p style={{ fontFamily: "'Josefin Sans', sans-serif" }} className="text-base text-black/90 text-center mb-6 sm:mb-8">
               Message me to discuss your web3 infrastructure needs
             </p>
 
