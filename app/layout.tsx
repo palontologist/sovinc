@@ -7,8 +7,13 @@ export const metadata: Metadata = {
   description:
     "Enabling small businesses to operate on sovereign, on‑chain infrastructure instead of legacy financial rails.",
   icons: {
-    icon: "/logo.png",
+    icon: [
+      { url: "/logo.png", sizes: "any" },
+      { url: "/logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo.png", sizes: "16x16", type: "image/png" },
+    ],
     apple: "/logo.png",
+    shortcut: "/logo.png",
   },
 }
 
